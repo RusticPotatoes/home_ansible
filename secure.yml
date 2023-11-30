@@ -7,7 +7,7 @@
     files:
       - /etc/ssh/sshd_config.d/50-cloud-init.conf
 
-  tasks:
+  pre_tasks:
     - name: Change owner of the files to pi
       ansible.builtin.file:
         path: "{{ item }}"
