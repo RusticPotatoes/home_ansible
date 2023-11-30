@@ -5,17 +5,17 @@
     - vars/secure.yml
 
   pre_tasks:
-    - name: Install fail2ban
-      ansible.builtin.apt:
-        name: fail2ban
-        state: present
-      become: yes
-
     - name: Print current user
       command: whoami
       register: whoami
     - debug:
         var: whoami.stdout
+        
+    - name: Install fail2ban
+      ansible.builtin.apt:
+        name: fail2ban
+        state: present
+      become: yes
 
   tasks:
     - block:
