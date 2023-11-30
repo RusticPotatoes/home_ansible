@@ -5,4 +5,3 @@ security_autoupdate_reboot: "true"
 security_sudoers_passworded: [rustic,pi,volumio]
 security_autoupdate_mail_on_error: false
 security_fail2ban_enabled: false
-security_ssh_permit_root_login: "yesgit "
