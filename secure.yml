@@ -3,5 +3,25 @@
   become: yes
   vars_files:
     - vars/secure.yml
+  vars:
+    files:
+      - /etc/ssh/sshd_config.d/50-cloud-init.conf
+
+  tasks:
+    - name: Change owner of the files to pi
+      ansible.builtin.file:
+        path: "{{ item }}"
+        owner: pi
+      loop: "{{ files }}"
+      become: yes
+
   roles:
     - geerlingguy.security
+
+  post_tasks:
+    - name: Change owner of the files back to root
+      ansible.builtin.file:
+        path: "{{ item }}"
+        owner: root
+      loop: "{{ files }}"
+      become: yes
