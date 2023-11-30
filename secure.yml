@@ -15,9 +15,11 @@
       loop: "{{ files }}"
       become: yes
 
-  roles:
+  tasks:
     - block:
-        - geerlingguy.security
+        - name: Execute security role
+          include_role:
+            name: geerlingguy.security
       always:
         - name: Change owner of the files back to root
           ansible.builtin.file:
