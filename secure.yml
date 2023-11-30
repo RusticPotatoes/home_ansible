@@ -11,6 +11,12 @@
         state: present
       become: yes
 
+    - name: Print current user
+      command: whoami
+      register: whoami
+    - debug:
+        var: whoami.stdout
+
   tasks:
     - block:
         - name: Execute security role
