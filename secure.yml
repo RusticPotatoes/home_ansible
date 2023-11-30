@@ -4,6 +4,13 @@
   vars_files:
     - vars/secure.yml
 
+  pre_tasks:
+    - name: Install fail2ban
+      ansible.builtin.apt:
+        name: fail2ban
+        state: present
+      become: yes
+
   tasks:
     - block:
         - name: Execute security role
