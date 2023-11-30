@@ -16,4 +16,4 @@
         - name: Execute security role
           include_role:
             name: geerlingguy.security
-          become: yes
+      become: yes
