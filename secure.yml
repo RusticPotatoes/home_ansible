@@ -1,0 +1,6 @@
+---
+- hosts: all
+  vars_files:
+    - vars/secure.yml
+  roles:
+    - geerlingguy.security
