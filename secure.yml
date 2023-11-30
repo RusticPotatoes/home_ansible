@@ -16,12 +16,12 @@
       become: yes
 
   roles:
-    - geerlingguy.security
-
-  post_tasks:
-    - name: Change owner of the files back to root
-      ansible.builtin.file:
-        path: "{{ item }}"
-        owner: root
-      loop: "{{ files }}"
-      become: yes
+    - block:
+        - geerlingguy.security
+      always:
+        - name: Change owner of the files back to root
+          ansible.builtin.file:
+            path: "{{ item }}"
+            owner: root
+          loop: "{{ files }}"
+          become: yes
