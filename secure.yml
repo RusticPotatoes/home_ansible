@@ -1,7 +1,5 @@
 ---
 - hosts: all
-  become: yes
-  become_method: sudo
   vars_files:
     - vars/secure.yml
 
@@ -16,11 +14,9 @@
       ansible.builtin.apt:
         name: fail2ban
         state: present
-      become: yes
 
   tasks:
     - block:
         - name: Execute security role
           include_role:
             name: geerlingguy.security
-      become: yes
