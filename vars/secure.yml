@@ -1,8 +1,9 @@
 ---
-security_ssh_allowed_users: [rustic,pi,volumio]
+security_ssh_allowed_users: [rustic, pi, volumio, root]
+security_ssh_permit_root_login: "yes"
 security_ssh_password_authentication: 'yes'
 security_autoupdate_reboot: "true"
-security_sudoers_passworded: [rustic,pi,volumio]
+security_sudoers_passworded: [rustic, pi, volumio, root]
 security_autoupdate_mail_on_error: false
-security_fail2ban_enabled: false
-security_ssh_allowed_groups: [pi,volumio]
+security_fail2ban_enabled: true
+security_ssh_allowed_groups: [pi, volumio, root]
