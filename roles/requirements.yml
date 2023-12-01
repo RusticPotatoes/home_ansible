@@ -4,6 +4,3 @@ roles:
   - name: geerlingguy.dotfiles
   - name: geerlingguy.security
   - name: geerlingguy.homebrew
-
-collections:
-  - name: geerlingguy.mac
