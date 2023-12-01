@@ -1,2 +1,2 @@
 # home_ansible
-generic tasks for the home network
+general tasks for the home
