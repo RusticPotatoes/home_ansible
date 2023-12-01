@@ -1,8 +1,8 @@
 ---
 roles:
-  - name: elliotweiser.osx-command-line-tools
-  - name: geerlingguy.dotfiles
-  - name: geerlingguy.security
+  - name: 'elliotweiser.osx-command-line-tools'
+  - name: 'geerlingguy.dotfiles'
+  - name: 'geerlingguy.security'
 
 collections:
-  - name: geerlingguy.mac
+  - name: 'geerlingguy.mac'
