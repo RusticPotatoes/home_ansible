@@ -1,6 +1,6 @@
 ---
 security_ssh_allowed_users: [rustic, pi, volumio]
-security_ssh_password_authentication: 'no'
+security_ssh_password_authentication: 'yes'
 security_autoupdate_reboot: "true"
 security_sudoers_passworded: [rustic, pi, volumio]
 security_autoupdate_mail_on_error: false
