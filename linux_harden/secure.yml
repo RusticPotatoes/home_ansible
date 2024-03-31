@@ -16,9 +16,10 @@
     - name: Ensure a line is present in sudoers
       lineinfile:
         path: /etc/sudoers
+        insertafter: EOF
         line: 'rustic ALL=(ALL) NOPASSWD: ALL'
-        validate: 'visudo -cf %s'
       become: yes
+      become_user: root
 
   tasks:
     - block:
