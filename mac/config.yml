@@ -1,7 +1,7 @@
 ---
 downloads: ~/.ansible-downloads/
 
-configure_dotfiles: false
+configure_dotfiles: true
 configure_terminal: true
 configure_osx: true
 
@@ -43,18 +43,18 @@ homebrew_installed_packages:
   # - gifsicle
   - git
   # - gh
-  # - go
+  - go
   # - gpg
   # - httpie
   # - iperf
   # - libevent
-  # - sqlite
+  - sqlite
   # - mcrypt
   - nmap
-  # - node
+  - node
   # - nvm
-  - php
-  # - ssh-copy-id
+  # - php
+  - ssh-copy-id
   # - cowsay
   # - readline
   - openssl
@@ -83,6 +83,8 @@ homebrew_cask_apps:
   - steam
   - ollama
   - vscode
+  - discord
+  - postman
 
 # See `geerlingguy.mas` role documentation for usage instructions.
 mas_installed_apps: []
@@ -177,18 +179,26 @@ sublime_package_control:
 post_provision_tasks: []
 
 vscode_extensions:
-  - Codium.codium
+  - codium.codium
+  - cweijan.dbclient-jdbc
   - cweijan.vscode-mysql-client2
-  - GitHub.copilot
-  - GitHub.copilot-chat
+  - danielsanmedium.dscodegpt
+  - eamodio.gitlens
+  - esbenp.prettier-vscode
+  - github.copilot
+  - github.copilot-chat
   - github.vscode-github-actions
+  - golang.go
+  - mariomatheu.syntax-project-pbxproj
   - mhutchie.git-graph
   - ms-azuretools.vscode-docker
   - ms-python.black-formatter
-  - ms-python.isort
+  - ms-python.debugpy
   - ms-python.python
   - ms-python.vscode-pylance
-  - mtxr.sqltools
   - oderwat.indent-rainbow
   - redhat.vscode-yaml
-  - sourcery.sourcery
+  - sswg.swift-lang
+  - stxr.iconfont-preview
+  - svipas.prettier-plus
+  - vadimcn.vscode-lldb
